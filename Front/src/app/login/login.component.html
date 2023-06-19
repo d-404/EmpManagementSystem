@@ -1,0 +1,12 @@
+<div class="container-fluid">
+<form #loginForm="ngForm" (ngSubmit)="submitForm(loginForm.value)" novalidate>
+Email Id : <input type="text" name="emailId" ngModel required minlength="2" maxlength="15" #emailId="ngModel"/>
+<br><br>
+Password : <input type="password" name="password" ngModel required minlength="2" maxlength="15" #password="ngModel"/>
+<br><br>
+<button [disabled]="!loginForm.valid">Login</button>
+</form>
+<div>
+    <div *ngIf="emailId.errors?.['required'] && emailId.touched">Please enter valid data!</div>
+</div>
+</div>
