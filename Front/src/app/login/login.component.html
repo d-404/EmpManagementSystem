@@ -8,5 +8,6 @@ Password : <input type="password" name="password" ngModel required minlength="2"
 </form>
 <div>
     <div *ngIf="emailId.errors?.['required'] && emailId.touched">Please enter valid data!</div>
+    <div *ngIf="password.errors?.['required'] && password.touched">Please enter valid data!</div>
 </div>
 </div>
